@@ -31,7 +31,7 @@ class BookingManagerMail extends Mailable
         return new Envelope(
             from: new Address(config('mail.from.auto-address')),
             to: [new Address(config('mail.manager'))],
-            subject: "You have new booking #{$this->booking->id}",
+            subject: __('mail.mail_subject', ['id' => $this->booking->id]),
         );
     }
 

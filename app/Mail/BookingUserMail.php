@@ -30,7 +30,7 @@ class BookingUserMail extends Mailable
     {
         return new Envelope(
             from: new Address(config('mail.from.auto-address'), 'no-reply'),
-            subject: "Booking #{$this->booking->id} confirmed",
+            subject: __('mail.confirmed.mail_subject', ['id' => $this->booking->id]),
         );
     }
 

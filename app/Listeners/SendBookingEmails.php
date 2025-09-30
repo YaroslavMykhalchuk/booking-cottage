@@ -24,13 +24,15 @@ class SendBookingEmails
      */
     public function handle(BookingCreated $event): void
     {
-        $managerMail = "manager@mail.com";
-
         $booking = $event->booking;
+        $locale = app()->getLocale();
 
-        Mail::to($booking->email)->send(new BookingUserMail($booking));
+        Mail::to($booking->email)
+            ->locale($locale)
+            ->send(new BookingUserMail($booking));
 
-        Mail::to(config('mail.mailers.from.name'))->send(new BookingManagerMail($booking));
-
+        Mail::to(config('mail.mailers.from.name'))
+            ->locale('en')
+            ->send(new BookingManagerMail($booking));
     }
 }

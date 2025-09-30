@@ -10,6 +10,9 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 
-Route::post('/booking', [BookingController::class, 'store']);
+Route::prefix(\App\Helpers\Langs::getLocale())->middleware('langs')->group(function () {
+    Route::post('/booking', [BookingController::class, 'store']);
+});
+
 Route::get('/{cottage}/not-available-days', [CalendarController::class, 'notAvailableDates']);
 Route::get('/available-interval', [CalendarController::class, 'availableDatesInterval']);

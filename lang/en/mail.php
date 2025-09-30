@@ -1,0 +1,40 @@
+<?php
+
+return [
+    'title' => 'New booking',
+    'order_line' => 'Order #:id on :datetime',
+    'cottage' => 'Cottage',
+    'cottage_no' => 'No. :n',
+    'check_in' => 'Check-in date',
+    'check_out' => 'Check-out date',
+    'checkout_note' => '(the check-out day is not counted as occupied)',
+    'name' => 'Name',
+    'email' => 'Email',
+    'phone' => 'Phone',
+    'comment' => 'Comment',
+    'manager_note' => 'Please check the calendar and confirm the booking in the internal system.',
+    'footer' => '© :year :app — notification service',
+    'subject_user' => 'Your booking #:id',
+    'subject_manager' => 'New booking #:id',
+    'mail_subject' => 'You have a new booking #:id',
+
+//    for user mail
+    'confirmed' => [
+        'title'          => 'Booking confirmed',
+        'subtitle'       => 'Thank you for choosing us!',
+        'greeting'       => 'Hello, :name!',
+        'created'        => 'Your booking has been created successfully.',
+        'cottage'        => 'Cottage',
+        'cottage_no'     => 'No. :n',
+        'check_in'       => 'Check-in date',
+        'check_out'      => 'Check-out date',
+        'checkout_note'  => '(the check-out day is not treated as occupied)',
+        'email'          => 'E-mail',
+        'phone'          => 'Phone',
+        'comment'        => 'Comment',
+        'autonote'       => 'This is an automated message. Please do not share it with third parties.',
+        'footer'         => '© :year :app',
+        'subject'        => 'Booking confirmed #:id',
+        'mail_subject' => 'Booking #:id confirmed',
+    ],
+];
