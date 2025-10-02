@@ -16,3 +16,4 @@ Route::prefix(\App\Helpers\Langs::getLocale())->middleware('langs')->group(funct
 
 Route::get('/{cottage}/not-available-days', [CalendarController::class, 'notAvailableDates']);
 Route::get('/available-interval', [CalendarController::class, 'availableDatesInterval']);
+Route::get('/available-dates-by-month', [CalendarController::class, 'notAvailableDatesByMonth']);

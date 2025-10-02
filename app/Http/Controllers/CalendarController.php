@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\GetDatesByMonth;
 use App\Http\Requests\GetStartDateRequest;
 use App\Models\Booking;
 use App\Services\CalendarService;
@@ -73,5 +74,16 @@ class CalendarController extends Controller
         $interval = $this->calendarService->availableDatesInterval($date_from, $cottage);
 
         return response()->json($interval);
+    }
+
+    public function notAvailableDatesByMonth(GetDatesByMonth $request)
+    {
+        $cottage = $request->validated()['cottage'];
+        $year = $request->validated()['year'];
+        $month = $request->validated()['month'];
+
+        $notAvailableDates = $this->calendarService->notAvailableDatesByMonth($cottage, $year, $month);
+
+        return response()->json($notAvailableDates);
     }
 }
