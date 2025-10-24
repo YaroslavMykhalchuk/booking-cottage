@@ -17,6 +17,12 @@ return [
     'subject_user' => 'Ваше бронирование №:id',
     'subject_manager' => 'Новое бронирование №:id',
     'mail_subject' => 'У вас новое бронирование №:id',
+    'mail_subject_form' => 'У вас есть новый запрос формы #:id',
+    'form_line'         => 'Заявка из формы №:id от :datetime',
+    'form_title'        => 'Новая заявка из формы',
+    'manager_form_note' => 'Пожалуйста, ответьте на заявку из формы.',
+    'message' => 'Сообщение',
+    'mail_form_subject' => 'Новая заявка из формы №:id',
 
     //    for user mail
     'confirmed' => [

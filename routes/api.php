@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\CalendarController;
+use App\Http\Controllers\FormController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +18,5 @@ Route::prefix(\App\Helpers\Langs::getLocale())->middleware('langs')->group(funct
 Route::get('/{cottage}/not-available-days', [CalendarController::class, 'notAvailableDates']);
 Route::get('/available-interval', [CalendarController::class, 'availableDatesInterval']);
 Route::get('/available-dates-by-month', [CalendarController::class, 'notAvailableDatesByMonth']);
+
+Route::post('/form', [FormController::class, 'sendForm']);

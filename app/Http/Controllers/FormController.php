@@ -2,17 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\CreateBookingRequest;
-use App\Services\BookingService;
+use App\Http\Requests\FormContactRequest;
+use App\Services\FormService;
 use Illuminate\Http\Request;
 
-class BookingController extends Controller
+class FormController extends Controller
 {
-    public function __construct(BookingService $bookingService)
+    public function __construct(FormService $formService)
     {
-        $this->bookingService = $bookingService;
+        $this->formService = $formService;
     }
-
     /**
      * Display a listing of the resource.
      */
@@ -24,13 +23,9 @@ class BookingController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(CreateBookingRequest $request)
+    public function store(Request $request)
     {
-        $this->bookingService->create($request->validated());
-
-        return response()->json([
-            'success' => 'Booking successfully created! The details have been sent to your email.',
-        ]);
+        //
     }
 
     /**
@@ -55,5 +50,14 @@ class BookingController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    public function sendForm(FormContactRequest $request)
+    {
+        $this->formService->contactUsForm($request->validated());
+
+        return response()->json([
+            'success' => 'Form successfully sent!',
+        ]);
     }
 }

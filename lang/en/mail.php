@@ -17,6 +17,12 @@ return [
     'subject_user' => 'Your booking #:id',
     'subject_manager' => 'New booking #:id',
     'mail_subject' => 'You have a new booking #:id',
+    'mail_subject_form' => 'You have a new form request #:id',
+    'form_line' => 'Form #:id on :datetime',
+    'form_title' => 'New form request',
+    'manager_form_note' => 'Please answer on form request',
+    'message' => 'Message',
+    'mail_form_subject' => 'New form request #:id',
 
 //    for user mail
     'confirmed' => [

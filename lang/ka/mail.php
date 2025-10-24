@@ -17,6 +17,12 @@ return [
     'subject_user' => 'თქვენი ჯავშანი №:id',
     'subject_manager' => 'ახალი ჯავშანი №:id',
     'mail_subject' => 'თქვენ გაქვთ ახალი ჯავშანი №:id',
+    'mail_subject_form' => 'თქვენ გაქვთ ახალი ფორმის მოთხოვნა #:id',
+    'form_line'         => 'ფორმის განაცხადი №:id — თარიღი :datetime',
+    'form_title'        => 'ფორმიდან ახალი განაცხადი',
+    'manager_form_note' => 'გთხოვთ, უპასუხოთ ფორმის განაცხადს.',
+    'message' => 'შეტყობინება',
+    'mail_form_subject' => 'ფორმიდან ახალი განაცხადი №:id',
 
     //    for user mail
     'confirmed' => [
